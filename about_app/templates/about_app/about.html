@@ -1,0 +1,54 @@
+{% extends 'base_app/base.html' %}
+{% load static %}
+{% block news_klasse %}
+class="header-section"
+{% endblock %}
+
+{% block news_klasse_2 %}
+{% endblock %}
+
+{% block content %}
+	<div id="fullpage">
+
+
+
+		<div class="section fp-auto-height" id="hero-section">
+			<div class="hero-section-2 d-flex align-items-center set-bg" data-setbg="{% static 'base_app/img/7.jpg' %}">
+				<div class="sp-container">
+					<div class="hero-content text-white">
+						 {% for element in haupt_beschreibung %}
+						<span>{{element.aufgaben}}</span>
+						<h2>{{element.name}}</h2>
+						<p>{{element.beschreibung}}</p>
+{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="contact-link">
+				<p>Kontatiere Mich</p>
+				<a href="{% url 'contact_app:contact_page' %}"><img src="{% static 'base_app/img/8.JPG' %}" alt=""></a>
+			</div>
+		</div>
+
+
+
+
+		<div class="section testimonial-section set-bg" data-setbg="{% static 'assets/img/section-bg/4.jpg' %}">
+			<div class="container">
+				<div class="testimonial-content">
+						 {% for element in untere_zusetzliche_beschreibung %}
+					<h2>{{ element.titel }}</h2>
+					<p>{{ element.beschreibung }}</p>
+					<img src="img/testi-avatar.jpg" class="testi-avatar" alt="">
+					<h6>Hubertus Mayr, <span>Künstler, Bildhauer</span></h6>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+{% endblock %}
