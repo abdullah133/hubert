@@ -15,31 +15,30 @@ class="header-section"
 		<div class="section fp-auto-height" id="hero-section">
 			<div class="hero-section-2 d-flex align-items-center set-bg" data-setbg="{% static 'base_app/img/7.JPG' %}">
 				<div class="sp-container">
-					<div class="hero-content text-white">
+					<div class="hero-content text-white mein_text_sichtbar">
 						 {% for element in haupt_beschreibung %}
 						<span>{{element.aufgaben}}</span>
 						<h2>{{element.name}}</h2>
-						<p>{{element.beschreibung}}</p>
+						<span>{{element.beschreibung}}</span>
 {% endfor %}
 					</div>
 				</div>
 			</div>
 			<div class="contact-link">
 				<p>Kontatiere Mich</p>
-				<a href="{% url 'contact_app:contact_page' %}"><img src="{% static 'base_app/img/8.JPG' %}" alt=""></a>
+				<a href="{% url 'contact_app:contact_page' %}"><img src="{% static 'base_app/img/8.png' %}" alt=""></a>
 			</div>
 		</div>
 
 
 
 
-		<div class="section testimonial-section set-bg" data-setbg="{% static 'assets/img/section-bg/4.jpg' %}">
+		<div class="section testimonial-section set-bg" data-setbg="{% static 'base_app/img/WC9Z3434.png' %}">
 			<div class="container">
-				<div class="testimonial-content">
+				<div class="testimonial-content mein_text_sichtbar_black_about mt-5">
 						 {% for element in untere_zusetzliche_beschreibung %}
-					<h2>{{ element.titel }}</h2>
+					<h2 class="mt-5">{{ element.titel }}</h2>
 					<p>{{ element.beschreibung }}</p>
-					<img src="img/testi-avatar.jpg" class="testi-avatar" alt="">
 					<h6>Hubertus Mayr, <span>Künstler, Bildhauer</span></h6>
 					{% endfor %}
 				</div>

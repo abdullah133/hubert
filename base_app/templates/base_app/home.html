@@ -35,7 +35,7 @@ class="header-section"
 
     <div class="contact-link">
       <p>kontaktiere mich</p>
-      <a href="{% url 'contact_app:contact_page' %}"><img src="{% static 'base_app/img/8.JPG' %}" alt=""></a>
+      <a href="{% url 'contact_app:contact_page' %}"><img src="{% static 'base_app/img/8.png' %}" alt=""></a>
     </div>
 
     {% endfor %}
@@ -44,10 +44,10 @@ class="header-section"
 
   {% for element in object_list %}
 
-  <div class="section about-section about-one set-bg" data-setbg="{% if forloop.counter == 1 %}{% static 'base_app/img/2.jpg' %}
-                                                                  {% elif forloop.counter == 2 %}{% static 'base_app/img/3.jpg' %}
+  <div class="section about-section about-one set-bg " data-setbg="{% if forloop.counter == 1 %}{% static 'base_app/img/2.jpg' %}
+                                                                  {% elif forloop.counter == 2 %}{% static 'base_app/img/WC9Z3023.png' %}
                                                                   {% else %}{% static 'base_app/img/4.JPG' %}{% endif %}">
-    <div class="about-content-warp text-white">
+    <div class="about-content-warp {% cycle 'mein_text_sichtbar title_withe' 'mein_text_sichtbar_black' %}">
       <h2>{{element.titel}}</h2>
       <p>{{element.text}}</p>
     </div>

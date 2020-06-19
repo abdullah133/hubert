@@ -10,7 +10,7 @@ app_name = 'gallery_app'
 
 urlpatterns = [
 
-    path('Austerllungen/', GalleryView.as_view(), name='gallery_page'),
+    path('Ausstellungen/', GalleryView.as_view(), name='gallery_page'),
 
 
 ]

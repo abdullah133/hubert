@@ -1,10 +1,10 @@
 /******************************************************************
-	Theme Name: 
-	Description: 
-	Author: 
-	Author URI: 
+	Theme Name:
+	Description:
+	Author:
+	Author URI:
 	Version: 1.0
-	Created: 
+	Created:
 ******************************************************************/
 
 /*------------------------------------------------------------------
@@ -115,6 +115,11 @@ ol {
 /*---------------------
 	2. Helper CSS
 -----------------------*/
+
+.section-title {
+	text-align: center;
+}
+
 
 .section-title {
 	text-align: center;
@@ -454,7 +459,7 @@ ol {
 }
 
 .hs-item h1 {
-	font-size: 36px;
+	font-size: 56px;
 	font-family: "BickhamScriptPro-Regular";
 	font-weight: 400;
 	line-height: 0.1;
@@ -591,10 +596,7 @@ ol {
 	margin-bottom: 35px;
 }
 
-.footer-about p {
-	color: #fff;
-	opacity: 0.25;
-}
+
 
 /* ----------------
   7. Footer section
@@ -617,10 +619,10 @@ ol {
 }
 
 .footer-info ul li {
-	color: #fff;
-	opacity: 0.25;
-	font-size: 14px;
-	text-transform: uppercase;
+
+
+
+
 	margin-bottom: 15px;
 }
 
@@ -688,9 +690,7 @@ ol {
 	margin-bottom: 100px;
 }
 
-.testimonial-content h6 span {
-	color: #a2a2a2;
-}
+
 
 .sp-about-section {
 	padding: 80px 15px;
@@ -1386,6 +1386,31 @@ ol {
 	.contact-text h2,
 	.portfolio-intro h2 {
     font-size: 35px;
-		font-size: 30px;	
+		font-size: 30px;
 	}
+}
+.mein_text_sichtbar p{
+	color: #fff;
+	font-weight: lighter;
+	font-size: 16px;
+
+}
+.title_withe h2{
+	color: #fff;
+}
+
+.mein_text_sichtbar_black p{
+	color: #000000;
+	font-weight: lighter;
+	font-size: 16px;
+	font-weight: bold;
+}
+.mein_text_sichtbar_black_about p{
+	color: #000000;
+	font-size: 14px;
+	font-weight: bolder;
+}
+.nicht_blauer_link a{
+	color: #fff;
+
 }

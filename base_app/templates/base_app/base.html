@@ -8,7 +8,7 @@
 	<meta name="keywords" content="porto, photo, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
-	<link href="{% static 'assets/img/favicon.ico' %}" rel="shortcut icon"/>
+	<link href="{% static 'base_app/img/logo.png' %}" rel="shortcut icon"/>
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -40,15 +40,23 @@
 	<header {% block news_klasse %}{% endblock %} {% block news_klasse_2 %}{% endblock %}>
 	  <div class="header-warp">
 	    <!-- logo -->
+			<a href="{% url 'about_app:about_page' %}" class="site-logo">
+	      <img src="{% static 'base_app/img/logo.png' %}" alt="">
+	    </a>
+	    <div class="header-social">
 
-	    <div class="header-social mr-5">
+				<a href=""><i></i></a>
+	      <a href=""><i></i></a>
+				<a href="{{ kontaktinfo.facebook_link }}"><i class="fa fa-facebook"></i></a>
+	      <a href=""><i></i></a>
+	      <a href=""><i></i></a>
 
-	      <a href="{{ kontaktinfo.facebook_link }}"><i class="fa fa-facebook"></i></a>
 
 
 	    </div>
 	    <div class="nav-switch">
 	      <i class="fa fa-bars"></i>
+
 	    </div>
 	    <!-- menu -->
 	    <ul class="main-menu">
@@ -83,6 +91,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha256-FnUP2HEr+LnsA4l1YflN3prVZISLwKs2FB7X9/fdPBE=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha256-SNaaqfQPa0XlEqQDrsurQ+Qq5XnhNrwHQXnZpdXlCEI=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" integrity="sha256-SjXUPmxobD+vLCws0crIzpdBrHgDjs8jamhUMv0eRac=" crossorigin="anonymous"></script>
 	<script src="{% static 'assets/js/main.js' %}"></script>
 
 

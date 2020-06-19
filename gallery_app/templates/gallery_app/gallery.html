@@ -18,10 +18,10 @@ class="header-section"
 					<h2>My Portfolio</h2>
 					<ul class="portfolio-filter controls">
 						<li class="control" data-filter="all">All</li>
-						<li class="control" data-filter=".sensual">Sensual</li>
-						<li class="control" data-filter=".nature">Nature</li>
-						<li class="control" data-filter=".portraits">Portraits</li>
-						<li class="control" data-filter=".weddings">Weddings</li>
+						<li class="control" data-filter=".sensual">Ausstellungen</li>
+						<li class="control" data-filter=".nature">Skulpturen</li>
+						<li class="control" data-filter=".portraits">Denkmäler</li>
+						<li class="control" data-filter=".weddings">Zeichnungen</li>
 					</ul>
 				</div>
 			</div>
@@ -30,7 +30,7 @@ class="header-section"
 			<!-- Item -->
 			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg nature" data-setbg="{% static 'assets/img/portfolio/2.jpg' %}"></a>
 			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg portraits" data-setbg="{% static 'assets/img/portfolio/3.jpg' %}"></a>
+			<a href="portfolio-single.html" class="grid-item mix portfolio-item {% cycle '__big set-bg sensual' 'set-bg nature' 'set-bg portraits' %}" data-setbg="{{objekt.bild.large.url}}"></a>
 			<!-- Item -->
 			<a href="portfolio-single.html" class="grid-item mix portfolio-item __big set-bg weddings" data-setbg="{% static 'assets/img/portfolio/4.jpg' %}"></a>
 			<!-- Item -->
