@@ -25,7 +25,7 @@ class="header-section"
 
     {% for element in home_beschreibung %}
     <div class="hero-slider owl-carousel">
-      <div class="hs-item set-bg" data-setbg="{% static 'base_app/img/1.jpg' %}">
+      <div class="hs-item set-bg" data-setbg="{% static 'base_app/img/home_foto.jpg' %}">
         <div class="container text-white">
           <h1>{{element.titel}} </h1>
           <h2>{{element.untertitel}} </h2>
@@ -35,7 +35,7 @@ class="header-section"
 
     <div class="contact-link">
       <p>kontaktiere mich</p>
-      <a href="{% url 'contact_app:contact_page' %}"><img src="{% static 'base_app/img/8.png' %}" alt=""></a>
+      <a href="{% url 'contact_app:contact_page' %}"><img src="{% static 'base_app/img/me.png' %}" alt=""></a>
     </div>
 
     {% endfor %}
@@ -44,9 +44,9 @@ class="header-section"
 
   {% for element in object_list %}
 
-  <div class="section about-section about-one set-bg " data-setbg="{% if forloop.counter == 1 %}{% static 'base_app/img/2.jpg' %}
-                                                                  {% elif forloop.counter == 2 %}{% static 'base_app/img/WC9Z3023.png' %}
-                                                                  {% else %}{% static 'base_app/img/4.JPG' %}{% endif %}">
+  <div class="section about-section about-one set-bg " data-setbg="{% if forloop.counter == 1 %}{% static 'base_app/img/erste_foto_home.jpg' %}
+                                                                  {% elif forloop.counter == 2 %}{% static 'base_app/img/zweites_foto_home.png' %}
+                                                                  {% else %}{% static 'base_app/img/dritte_foto_home.png' %}{% endif %}">
     <div class="about-content-warp {% cycle 'mein_text_sichtbar title_withe' 'mein_text_sichtbar_black' %}">
       <h2>{{element.titel}}</h2>
       <p>{{element.text}}</p>
