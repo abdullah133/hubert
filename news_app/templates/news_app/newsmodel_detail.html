@@ -9,13 +9,13 @@ class="header-section header-default-bg set-bg"
 {% endblock %}
 
 {% block news_klasse_2 %}
-data-setbg="{% static 'assets/img/header-bg.jpg' %}"
+data-setbg="{% static 'base_app/img/zweites_nav.png' %}"
 {% endblock %}
 {% block content %}
 
-<section class="portfilio-single set-bg" data-setbg="{{object.bild.middle.url}}">
+<section class="portfilio-single set-bg" data-setbg="{{object.bild.large.url}}">
     <div class="sp-container">
-        <div class="portfolio-single-content text-white">
+        <div class="portfolio-single-content text-white ">
 
     <h4>{{object.titel}}</h4>
     <p>{{object.text|linebreaks|urlize}}</p>
