@@ -11,8 +11,8 @@ class AboutModel(models.Model):
 
 
     class Meta:
-        verbose_name_plural = " Die Hauptbeschreibungen"
-        verbose_name = "Hauptbeschreibung"
+        verbose_name_plural = " Die erste Beschreibung"
+        verbose_name = " erste Beschreibung"
     def __str__(self):
         return self.name
 
@@ -28,9 +28,12 @@ class UeberMichBeschreibungen(models.Model):
     beschreibung = models.TextField("Untere Beschreibung",blank=True, null=True)
 
     class Meta:
-        verbose_name_plural = "Zusetzliche Beschreibungen"
-        verbose_name = "Zusetzliche Beschreibung"
+        verbose_name_plural = "Die zweite Beschreibung"
+        verbose_name = "zweite Beschreibung"
 
 
     def __str__(self):
         return self.titel
+
+    def get_absolute_url(self):
+        return reverse('about_app:about_page')

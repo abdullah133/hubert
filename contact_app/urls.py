@@ -13,5 +13,4 @@ urlpatterns = [
     path('Kontakt/', ContactView.as_view(), name='contact_page'),
     path('Kontakt/Erfolg/', ContactViewErfolg.as_view(), name='contact_erfolg_page'),
 
-
 ]

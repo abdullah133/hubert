@@ -37,11 +37,11 @@
 
 
 	<!-- Header Section -->
-	<header {% block news_klasse %}{% endblock %} {% block news_klasse_2 %}{% endblock %}>
+	<header class="header-section {% block news %}{% endblock %}">
 	  <div class="header-warp">
 	    <!-- logo -->
 			<a href="{% url 'about_app:about_page' %}" class="site-logo">
-	      <img src="{% static 'base_app/img/logo_home.png' %}" alt="">
+	      <img src="{% static 'base_app/img/hubertus_logo_weiss_small.png' %}" alt="">
 	    </a>
 	    <div class="header-social">
 

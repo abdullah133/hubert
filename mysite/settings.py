@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'gallery_app.apps.GalleryAppConfig',
     'news_app.apps.NewsAppConfig',
     'contact_app.apps.ContactAppConfig',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [

@@ -35,11 +35,11 @@ class="header-section"
 
 		<div class="section testimonial-section set-bg" data-setbg="{% static 'base_app/img/zweites_about_foto.png' %}">
 			<div class="container">
-				<div class="testimonial-content mein_text_sichtbar_black_about mt-5">
+				<div class="about_zweites_bild_text">
 						 {% for element in untere_zusetzliche_beschreibung %}
-					<h2 class="mt-5">{{ element.titel }}</h2>
+					<h2 class="mt-5 mb-5">{{ element.titel }}</h2>
 					<p>{{ element.beschreibung }}</p>
-					<h6>Hubertus Mayr, <span>Künstler, Bildhauer</span></h6>
+
 					{% endfor %}
 				</div>
 			</div>

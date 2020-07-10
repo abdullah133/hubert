@@ -10,18 +10,33 @@ class="header-section"
 {% block news_klasse_2 %}
 {% endblock %}
 	{% block content %}
+
 	<!-- Contact Section -->
-	<section class="contact-page set-bg" data-setbg="{% static 'assets/img/contact-bg.jpg' %}">
+	<section class="contact-page set-bg" data-setbg="{% static 'base_app/img/IMG_7806.jpg' %}">
 		<div class="sp-container">
 			<div class="row">
-{% include 'contact_app/contact_both.html' %}
-				<div class="col-lg-7 offset-lg-1">
-					<form class="contact-form">
+				<div class="col-lg-4">
+					<div class="contact-text text-white">
+
+						<h2>Kontaktiere Mich</h2>
+						<p class="mein_text_sichtbar">{{kontaktinfo.beschreibung|linebreaks|urlize}}</p>
+						<ul>
+							<li><h6>Phone:</h6>{{kontaktinfo.telefon}}</li>
+							<li><h6>Mail:</h6>{{kontaktinfo.email}}</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="col-lg-7 offset-lg-1 ">
+					<form class="contact-form" method="post">
 						{% csrf_token %}
-				{{form.errors}}
-						<div class="row">
+							{{form.errors}}
+						<div class="row" >
 							<div class="col-md-6">
-								{{ form.name }}
+
+
+										{{ form.name }}
+
                 {{ form.name.errors }}
 							</div>
 							<div class="col-md-6">
@@ -30,10 +45,10 @@ class="header-section"
 							</div>
 							<div class="col-md-12">
 								{{ form.betreff }}
-              {{ form.betreff.errors }}
+							{{ form.betreff.errors }}
 							{{ form.nachricht }}
 						{{ form.nachricht.errors }}
-								<button class="site-btn"><span>senden</span></button>
+								<button type="submit" class="site-btn"><span>send</span></button>
 							</div>
 						</div>
 					</form>
@@ -43,4 +58,5 @@ class="header-section"
 	</section>
 	<!-- Contact Section end -->
 
-{% endblock %}
+
+	{% endblock %}

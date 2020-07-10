@@ -1,11 +1,11 @@
 from django.db import models
 from stdimage import StdImageField
-
+from django.urls import reverse
 # Create your models here.
 class HomeBeschreibung(models.Model):
     titel = models.CharField('Titel',max_length=255)
     untertitel = models.TextField('Untertitel',blank=True, null=True)
-    
+
 
     class Meta:
         ordering = ['id']

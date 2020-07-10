@@ -48,7 +48,7 @@ $(window).on('load', function() {
 	$('.nav-switch').on('click', function () {
 		$('.main-menu').slideToggle();
 	});
-	
+
 
 	/*------------------
 		Background Set
@@ -83,7 +83,7 @@ $(window).on('load', function() {
         var b = --a.item.index, a = a.item.count;
     	$("#snh-1").html("<span> "+ (1 > b ? b + a : b > a ? b - a : b) + "</span>/<span>" + a + "</span>");
 	});
-	
+
 
 	/*------------------
 		Portfolio Slider
@@ -113,7 +113,7 @@ $(window).on('load', function() {
         var b = --a.item.index, a = a.item.count;
     	$("#snh-1").html("<span> "+ (1 > b ? b + a : b > a ? b - a : b) + "</span>/<span>" + a + "</span>");
 	});
-	
+
 
 	/*----------------------
 		Portfolio item size

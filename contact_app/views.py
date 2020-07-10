@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic.base import TemplateView
 # Create your views here.
+from django.views.generic.base import TemplateView
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
 from .forms import KontaktForm
@@ -16,17 +16,17 @@ class ContactView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['navbar_active'] = 'contact'
-        kontakt_angaben = KontaktInfo.objects.all().first()
+        kontakt_angaben = KontaktInfo.objects.all()
         context['kontakt_angaben'] = kontakt_angaben
+
         return context
 
     def form_valid(self, form):
+
         user_email = form.cleaned_data['user_email']
         betreff = form.cleaned_data['betreff']
         name = form.cleaned_data['name']
         nachricht = form.cleaned_data['nachricht']
-
         subject = 'Ihr habt eine neue Nachricht!'
         message = 'Ihr habt eine neue Nachricht'
         msg_html = render_to_string('contact_app/emails/email_contact.html', {'user_email':user_email,
@@ -45,13 +45,3 @@ class ContactView(FormView):
 
 class ContactViewErfolg(TemplateView):
     template_name = 'contact_app/contact_erfolg.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['navbar_active'] = 'contact'
-        beschreibung_kontakt = KontaktBeschreibungen.objects.all().first()
-        context['beschreibung_kontakt'] = beschreibung_kontakt
-        kontakt_angaben = KontaktInfo.objects.all().first()
-        context['kontakt_angaben'] = kontakt_angaben
-
-        return context

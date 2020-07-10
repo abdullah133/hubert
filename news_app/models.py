@@ -9,7 +9,7 @@ from django.urls import reverse
 class NewsModel(models.Model):
     titel = models.CharField("Überschrift",max_length=300)
     text = models.TextField("Text",blank=True, null=True)
-    bild = StdImageField("Bild",upload_to='News/bilder/', blank=True, variations={'large': (1164, 900),'middle': (582, 450)})
+    bild = StdImageField("Bild",upload_to='News/bilder/', blank=True, variations={'large': (1200, 600),'middle': (600, 300)})
     pdf = models.FileField(upload_to='News/pdf/', blank=True)
     datum = models.DateTimeField("Event-Datum",blank=True, null=True)
 

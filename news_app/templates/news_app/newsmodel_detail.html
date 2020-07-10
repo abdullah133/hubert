@@ -4,31 +4,58 @@
 {% block head %}
 
 {% endblock %}
-{% block news_klasse %}
-class="header-section header-default-bg set-bg"
-{% endblock %}
+{% block news %}schwarzer_hintergrund_navbar{% endblock %}
 
-{% block news_klasse_2 %}
-data-setbg="{% static 'base_app/img/zweites_nav.png' %}"
-{% endblock %}
 {% block content %}
 
-<section class="portfilio-single set-bg" data-setbg="{{object.bild.large.url}}">
-    <div class="sp-container">
-        <div class="portfolio-single-content text-white ">
 
-    <h4>{{object.titel}}</h4>
-    <p>{{object.text|linebreaks|urlize}}</p>
-           <ul>
+<section class="blog-page set-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
 
-               <li><h6>Datum:</h6><span>{{object.datum}}</span></li>
 
-           </ul>
+        <div class="blog-item">
+          <div class="blog-thumb">
+            <img src="{{object.bild.large.url}}" width="80%" alt="">
+
+            <div class="blog-date">{{object.datum}}</div>
+
+          </div>
+
+
+
+          <div class="blog-content">
+            <h3>{{object.titel}}</h3>
+            <div class="blog-metas">
+              <div class="blog-meta">In Photography</div>
+              <div class="blog-meta">By Hubertus Meyr</div>
+            </div>
+            <p> {{ object.text|linebreaks|urlize }} </p>
+
+
+          </div>
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
     </div>
+  </div>
 </section>
-
-
-
 
 {% endblock %}

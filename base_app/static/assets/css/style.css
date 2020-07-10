@@ -385,9 +385,12 @@ ol {
 	padding: 0 15px;
 	z-index: 999;
 }
-
+.schwarzer_hintergrund_navbar{
+	background: black;
+	padding-bottom: 8px;
+}
 .header-warp {
-	padding-top: 35px;
+	padding-top: 20px;
 	max-width: 1464px;
 	margin: 0 auto;
 }
@@ -827,7 +830,7 @@ ol {
 }
 
 .portfolio-single-content p {
-	
+	font-weight: 600;
 	margin-bottom: 30px;
 }
 
@@ -1054,7 +1057,7 @@ ol {
 	padding-bottom: 120px;
 }
 
-.contact-text h2 {
+.contact-text  h2 {
 	font-size: 48px;
 	font-weight: 500;
 	margin-bottom: 30px;
@@ -1094,7 +1097,12 @@ ol {
 	border-bottom: 1px solid #fff;
 	background: transparent;
 }
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+	color: #fff;
 
+
+}
 .contact-form textarea {
 	height: 220px;
 	margin-bottom: 50px;
@@ -1413,4 +1421,11 @@ ol {
 .nicht_blauer_link a{
 	color: #fff;
 
+}
+.about_zweites_bild_text p {
+	font-weight: 600;
+	font-size: 15px;
+	margin-bottom: 60px;
+	color: rgba(0,0,0,.9);
+	max-width: 585px;
 }

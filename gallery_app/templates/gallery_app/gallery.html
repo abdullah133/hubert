@@ -8,48 +8,46 @@ class="header-section"
 {% block news_klasse_2 %}
 {% endblock %}
 {% block content %}
-	<!-- portfilio Section -->
+	<!-- Gallerie Section -->
+
+
+
+
+  <!-- Gallerie Section -->
     <section class="portfilio-page">
 		<div class="portfolios-area">
 			<div class="grid-sizer"></div>
 			<div class="grid-item portfolio-item __big __wide">
 				<div class="portfolio-intro text-white" >
-					<span>Proffesional Photographer</span>
+					<span>Professional Photographer</span>
 					<h2>My Portfolio</h2>
 					<ul class="portfolio-filter controls">
-						<li class="control" data-filter="all">All</li>
-						<li class="control" data-filter=".sensual">Ausstellungen</li>
-						<li class="control" data-filter=".nature">Skulpturen</li>
-						<li class="control" data-filter=".portraits">Denkmäler</li>
-						<li class="control" data-filter=".weddings">Zeichnungen</li>
+            	<li class="control" data-filter="all">All</li>
+    {% for element in kategorie_gallery %}
+
+						<li class="control" data-filter=".{{element.kategorie_name}}">{{element.kategorie_name}}</li>
+						    {% endfor %}
 					</ul>
 				</div>
 			</div>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item __big set-bg sensual" data-setbg="{% static 'assets/img/portfolio/1.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg nature" data-setbg="{% static 'assets/img/portfolio/2.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item {% cycle '__big set-bg sensual' 'set-bg nature' 'set-bg portraits' %}" data-setbg="{{objekt.bild.large.url}}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item __big set-bg weddings" data-setbg="{% static 'assets/img/portfolio/4.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg sensual" data-setbg="{% static 'assets/img/portfolio/5.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg nature" data-setbg="{% static 'assets/img/portfolio/6.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg portraits" data-setbg="{% static 'assets/img/portfolio/7.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg weddings" data-setbg="{% static 'assets/img/portfolio/8.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg sensual" data-setbg="{% static 'assets/img/portfolio/9.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg nature" data-setbg="{% static 'assets/img/portfolio/10.jpg' %}"></a>
-			<!-- Item -->
-			<a href="portfolio-single.html" class="grid-item mix portfolio-item set-bg portraits" data-setbg="{% static 'assets/img/portfolio/11.jpg' %}"></a>
-			<!-- Item -->
+
+
+			    {% for element in kategorie_gallery %}
+
+          {% for bild in element.bilder_set.all %}
+
+          	<a href="{{bild.get_absolute_url}}" class="grid-item mix portfolio-item set-bg sensual {% cycle  'grid-item mix portfolio-item set-bg nature' 'grid-item mix portfolio-item set-bg portraits' 'grid-item mix portfolio-item __big set-bg weddings' 'grid-item mix portfolio-item __big set-bg sensual' %} {{bild.kategorie.kategorie_name}}"
+                                                                                                    data-setbg="{{bild.bild.large.url}}"></a>
+          {% endfor %}
+
+		   {% endfor %}
+
+
+
+
 			<a href="#" class="grid-item mix portfolio-item portfolio-next-btn"><h3>Next</h3></a>
+
 		</div>
 	</section>
-	<!-- portfilio Section end-->
-	{% endblock %}
+	<!-- Gallerie Section end-->
+ {% endblock %}

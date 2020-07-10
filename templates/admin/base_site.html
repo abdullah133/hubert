@@ -2,7 +2,8 @@
 {% block extrastyle %}
 <style>
   #header {
-    background-color: #408640;
+    background-color:#1A0000
+;
     color: white
   }
 
@@ -14,13 +15,18 @@
     font-weight: 400;
     font-size: 13px;
     text-align: left;
-    background: #408640;
-    color: #fff;
+    background: #1A0000;
+    color: #1A0000;
   }
   div.breadcrumbs {
-    background: blue;
+    background: #1A0000;
 
 }
+.object-tools a:focus, .object-tools a:hover {
+    background-color: red;
+}
+
+
 </style>
 {% endblock %}
 {% block branding %}
@@ -28,7 +34,7 @@
 <h1 id="site-name">
 
     <a href="{% url 'admin:index' %}">
-        <img src="{% static 'base_app/img/treeathlon_logo.png' %}" height="80px" />
+        <img src="{% static 'base_app/img/me.png' %}" height="80px" />
     </a>
 </h1>
 

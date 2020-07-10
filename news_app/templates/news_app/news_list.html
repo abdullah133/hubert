@@ -5,13 +5,7 @@
 <link href="{% static 'news_app/news.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block news_klasse %}
-class="header-section header-default-bg set-bg"
-{% endblock %}
-
-{% block news_klasse_2 %}
-data-setbg="{% static 'base_app/img/zweites_nav.png' %}"
-{% endblock %}
+{% block news %}schwarzer_hintergrund_navbar{% endblock %}
 {% block content %}
 
 <!-- Header Section -->
@@ -28,7 +22,7 @@ data-setbg="{% static 'base_app/img/zweites_nav.png' %}"
 
         <div class="blog-item">
           <div class="blog-thumb">
-            <img src="{{element.bild.large.url}}" alt="">
+            <img src="{{element.bild.large.url}}" width="80%" alt="">
             {% if element.datum %}
             <div class="blog-date">{{element.datum}}</div>
             {% endif %}
